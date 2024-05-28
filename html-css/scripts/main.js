@@ -17,18 +17,29 @@ money.style.color = "blue"
 money.style.fontSize = "200px"
 money.style.display = "none"*/
 
-document.querySelector("h1").addEventListener('click', () => {
+/*document.querySelector("h1").addEventListener('click', () => {
     const money = document.getElementById("money")
     money.innerHTML = "hello Javascript"
     money.style.color = "blue"
     //money.style.fontSize = "200px"
     //money.style.display = "none"
-})
+})*/
+
+const money = document.getElementById('money')
+
+
+//money.addEventListener("click", myMoney)
+
+function myMoney(){
+    money.innerHTML = "Hello Javascript"
+}
+
+money.onclick = myMoney
 
 // Calling by class
 //const mon = document.getElementsByClassName("mon")
 
-let myButton = document.querySelector('button');
+/*let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
 function setUserName() {
@@ -50,6 +61,24 @@ if(!localStorage.getItem('name')) {
 
 myButton.onclick = function() {
   setUserName();
-}
+}*/
 
 
+const zero = document.getElementById('zero')
+const incr = document.getElementById("increase")
+const decr = document.getElementById("decrease")
+
+incr.addEventListener("click", (e) =>{
+    e.preventDefault()
+    let answer = zero.innerHTML++
+    parseInt(answer)
+    
+})
+
+
+decr.addEventListener("click", (e) =>{
+    e.preventDefault()
+    let answer = zero.innerHTML--
+    parseInt(answer)
+    
+})
